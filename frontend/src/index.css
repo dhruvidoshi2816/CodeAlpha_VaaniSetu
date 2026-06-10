@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-600/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-surface-950 text-zinc-100 font-sans antialiased;
+  }
+
+  /* Light mode body */
+  body.light {
+    @apply bg-zinc-50 text-zinc-900;
+  }
+}
+
+@layer components {
+  /* ── Glass card (dark) ── */
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-glass;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+           bg-brand-indigo hover:bg-indigo-500 text-white font-medium
+           transition-all duration-200 hover:shadow-glow active:scale-[0.98]
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-indigo/60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+           glass hover:bg-white/10 text-zinc-200 font-medium
+           transition-all duration-200 active:scale-[0.98]
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+  }
+
+  /* ── Input ── */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl glass bg-surface-800/50
+           text-zinc-100 placeholder:text-zinc-500
+           focus:outline-none focus:ring-2 focus:ring-brand-indigo/50
+           transition-all duration-200;
+  }
+
+  /* ── Card ── */
+  .card {
+    @apply rounded-2xl glass p-6 transition-all duration-300
+           hover:border-white/20;
+  }
+
+  /* ── Gradient text ── */
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-indigo via-brand-cyan to-brand-indigo
+           bg-clip-text text-transparent;
+  }
+
+  /* ── Glow orb ── */
+  .glow-orb {
+    @apply absolute rounded-full blur-3xl opacity-20 pointer-events-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: rgba(99,102,241,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(99,102,241,0.5); }
+
+/* ── Light mode overrides ── */
+.light .glass {
+  background: rgba(255,255,255,0.85);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.light .card {
+  background: rgba(255,255,255,0.92);
+  border-color: rgba(0,0,0,0.08);
+}
+
+.light .card:hover {
+  border-color: rgba(99,102,241,0.25);
+}
+
+.light .input-field {
+  background: rgba(255,255,255,0.95);
+  color: #18181b;
+  border-color: rgba(0,0,0,0.12);
+}
+
+.light .input-field::placeholder {
+  color: #a1a1aa;
+}
+
+/* Fix textarea text color in light mode */
+.light textarea {
+  color: #18181b !important;
+}
+
+.light textarea::placeholder {
+  color: #a1a1aa !important;
+}
+
+.light .btn-secondary {
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.1);
+  color: #3f3f46;
+}
+
+.light .btn-secondary:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+.light body,
+.light .text-zinc-100 { color: #18181b; }
+.light .text-zinc-300 { color: #3f3f46; }
+.light .text-zinc-400 { color: #52525b; }
+.light .text-zinc-500 { color: #71717a; }
+.light .text-zinc-600 { color: #a1a1aa; }
+
+.light .bg-surface-800\/50,
+.light .bg-surface-800\/60,
+.light .bg-surface-900 {
+  background: rgba(0,0,0,0.04) !important;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: rgba(99,102,241,0.2);
+}
+
+/* SearchableLanguageSelector dropdown in light mode */
+.light .border-white\/8 {
+  border-color: rgba(0,0,0,0.08);
+}
+
+.light .hover\:bg-white\/8:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+/* Ensure gradient text works in light mode */
+.light .gradient-text {
+  background: linear-gradient(to right, #6366f1, #22d3ee, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
