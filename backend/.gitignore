@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.db
+.env
+venv/
+.venv/
+.DS_Store
+Thumbs.db
+
+tessdata/*.traineddata
+tessdata/*.part
