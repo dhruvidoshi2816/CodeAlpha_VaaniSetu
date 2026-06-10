@@ -1,0 +1,34 @@
+# Python
+backend/venv/
+backend/.env
+backend/__pycache__/
+**/__pycache__/
+**/*.py[cod]
+**/*.db
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# Tesseract language packs (downloaded on first OCR use)
+backend/tessdata/*.traineddata
+backend/tessdata/*.part
+
+# Local duplicates and old copies — not part of the repo
+venv/
+translation-app/
+docs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Personal notes (keep on your machine if you want them)
+DEPLOYMENT_REPORT.md
+PRODUCTION_AUDIT.md
+SETUP_GUIDE_COMPLETE.md
