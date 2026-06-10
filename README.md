@@ -196,18 +196,5 @@ The goal of VaaniSetu is to provide a unified multilingual communication platfor
 
 By combining text, voice, image, and document translation into a single application, VaaniSetu helps users communicate effectively regardless of language barriers.
 
----
 
-## 📸 Screenshots
-
-Add screenshots of:
-
-* Home Page
-* Text Translation
-* Voice Translation
-* OCR Translation
-* Document Translation
-* History Dashboard
-
----
 
