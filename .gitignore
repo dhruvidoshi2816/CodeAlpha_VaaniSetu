@@ -12,7 +12,7 @@ frontend/dist/
 frontend/.env
 frontend/.env.local
 
-# Tesseract language packs (downloaded on first OCR use)
+# Tesseract language packs 
 backend/tessdata/*.traineddata
 backend/tessdata/*.part
 
@@ -28,7 +28,7 @@ docs/
 Thumbs.db
 *.log
 
-# Personal notes (keep on your machine if you want them)
+# Personal notes 
 DEPLOYMENT_REPORT.md
 PRODUCTION_AUDIT.md
 SETUP_GUIDE_COMPLETE.md
